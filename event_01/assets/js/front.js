@@ -160,6 +160,8 @@ class DesignPopup {
 
   function designModal(option){
     const modalGroupCreate = document.createElement("div");
+    let domHtml = document.querySelector("html");
+    let design_popup_wrap_active = document.querySelectorAll(".popup_wrap.active");
     let modal_wrap_parent = null;
     let modal_item = null;
     let pagewrap = document.querySelector(".page_wrap");
@@ -171,7 +173,7 @@ class DesignPopup {
     }else{
       modalGroupCreate.remove();
     }
-    modal_wrap_parent = document.querySelector(".layer_wrap_parent");
+    modal_wrap_parent = document.querySelector(".modal_wrap_parent");
 
     let btnHTML = ``;
 
@@ -245,6 +247,9 @@ class DesignPopup {
     function closeAction(){
       let actionNum = 0;
       modal_item.classList.remove("motion_end");
+      if (design_popup_wrap_active.length === 0) {
+        domHtml.classList.remove("touchDis");
+      }
       if(actionNum){clearTimeout(actionNum);}
       actionNum = setTimeout(()=>{
         modal_item.classList.remove("active");
