@@ -23,13 +23,13 @@
                         <div class="page_form_cols">
                             <div class="page_form_item">
                                 <div class="form_key_cols"><span class="pkey_label">이름</span></div>
-                                <div class="form_value_cols"><input type="text" class="form_input" placeholder="홍길동"></div>
+                                <div class="form_value_cols"><input type="text" class="form_input" id="name_input" placeholder="홍길동"></div>
                             </div>
                         </div>
                         <div class="page_form_cols">
                             <div class="page_form_item">
                                 <div class="form_key_cols"><span class="pkey_label">생년월일</span></div>
-                                <div class="form_value_cols"><input type="text" class="form_input" placeholder="910101"></div>
+                                <div class="form_value_cols"><input type="text" class="form_input" id="birth_input" placeholder="910101"></div>
                             </div>
                         </div>
                     </div>
@@ -124,13 +124,13 @@
             </div>
         </div>
     </div>
-    <div class="popup_wrap" id="alertPopup01">
+    <!-- <div class="modal_wrap" id="alertPopup01">
         <div class="bg_dim"></div>
-        <div class="popup_box_tb">
-            <div class="popup_box_td">
-                <div class="popup_box_item">
-                    <div class="popup_box_message_row">
-                        <p class="popup_box_message">
+        <div class="modal_box_tb">
+            <div class="modal_box_td">
+                <div class="modal_box_item">
+                    <div class="modal_box_message_row">
+                        <p class="modal_box_message">
                             고객님은 리워드 대상이 아닙니다. 해당 이벤트는 신한 슈퍼SOL 가입 시 권유직원 등록에서 '신한라이프'를 선택해주신 고객님만 신청이 가능합니다. 
                         </p>
                     </div>
@@ -141,13 +141,13 @@
             </div>
         </div>
     </div>
-    <div class="popup_wrap" id="alertPopup02">
+    <div class="modal_wrap" id="alertPopup02">
         <div class="bg_dim"></div>
-        <div class="popup_box_tb">
-            <div class="popup_box_td">
-                <div class="popup_box_item">
-                    <div class="popup_box_message_row">
-                        <p class="popup_box_message">
+        <div class="modal_box_tb">
+            <div class="modal_box_td">
+                <div class="modal_box_item">
+                    <div class="modal_box_message_row">
+                        <p class="modal_box_message">
                             신한 슈퍼SOL 앱에 가입한 후 이벤트에 참여해 주시기 바랍니다.(앱 가입 시 권유직원 등록에서 '신한라이프' 선택 필수)
                         </p>
                     </div>
@@ -158,7 +158,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- // popup -->
 	<script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -174,7 +174,7 @@
                 closeCallback(){
                 }
             });
-            let alertPopup01 = new DesignPopup({
+            /* let alertPopup01 = new DesignPopup({
                 selector: "#alertPopup01",
                 beforeCallback(){
 
@@ -195,7 +195,7 @@
                 },
                 closeCallback(){
                 }
-            });
+            }); */
 
 
             // 퍼블확인용
@@ -204,9 +204,25 @@
             if(url_2 === "staff"){
                 staff_popup.popupShow();
             }else if(url_2 === "popup01"){
-                alertPopup01.popupShow();
+                // alertPopup01.popupShow();
+                designModal({
+                    message : "고객님은 리워드 대상이 아닙니다. 해당 이벤트는 신한 슈퍼SOL 가입 시 권유직원 등록에서 '신한라이프'를 선택해주신 고객님만 신청이 가능합니다.",
+                    okcallback(){
+                        console.log('okcallback');
+                    }
+                });
             }else if(url_2 === "popup02"){
-                alertPopup02.popupShow(); 
+                // alertPopup02.popupShow(); 
+                designModal({
+                    message : "신한 슈퍼SOL 앱에 가입한 후 이벤트에 참여해 주시기 바랍니다.(앱 가입 시 권유직원 등록에서 '신한라이프' 선택 필수)",
+                    modaltype : 'confirm',
+                    okcallback(){
+                        console.log('okcallback');
+                    },
+                    cancelcallback(){
+                        console.log('cancelcallback');
+                    }
+                });
             }
         });
 	</script>
