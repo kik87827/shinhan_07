@@ -209,7 +209,7 @@ input.props_form:checked + .props_label{}
 .popup_screen_wrap{padding:25px 0;}
 .popup_screen_wrap img{vertical-align: top;}
 
-@media (min-width:376px){
+@media (min-width:431px){
     .popup_item,
     .modal_box_item,
     .popup_box_item{max-width:336px;}
