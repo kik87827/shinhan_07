@@ -223,6 +223,14 @@
                         console.log('cancelcallback');
                     }
                 });
+            }else if(url_2 === "popup03"){
+                // alertPopup02.popupShow(); 
+                designModal({
+                    message : "개인정보 수집 및 활용동의에 동의하지 않으시면 리워드를 지급 할수 없습니다.",
+                    okcallback(){
+                        console.log('okcallback');
+                    }
+                });
             }
         });
 	</script>
