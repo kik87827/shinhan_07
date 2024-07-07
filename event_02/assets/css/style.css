@@ -19,7 +19,17 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .page_body{}
 .page_wrap{}
 .event_contents_wrap{max-width:768px; margin:0 auto;}
-
+.event_board_container{position:relative;}
+.bg_group{position:absolute;top:0;left:0;width:100%;background:#006f4a;height:100%;display:flex; flex-direction: column; justify-content: space-between;}
+.bg_group:before{}
+.bg_group img{vertical-align: top;}
+.bg_top{position:relative;z-index:3;}
+.bg_mid{}
+.bg_bottom{position:relative;z-index:1;}
+.bg_bottom img{position:relative;z-index:1;}
+.bg_bottom:before{display:block;content:'';background:url("../images/event_middle.jpg") repeat-y 0 0/100% auto;z-index:0;position:absolute;bottom:0;left:0;height:200vh;width:100%;}
+.board_contents{padding:62% 11% 6.2%;position:relative;z-index:5;}
+.board_contents *{color:#fff;}
 
 
 /* popup */
