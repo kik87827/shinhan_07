@@ -13,12 +13,91 @@
 </head>
 <body class="page_body">
     <div class="page_wrap">
-        
+        <div class="event_contents_wrap">
+			이벤트 내용이 들어갑니다.
+		</div>
+    </div>
+
+	<!-- popup -->
+    <div class="popup_wrap" id="rightPopup">
+        <div class="bg_dim"></div>
+        <div class="popup_item">
+            <div class="popup_contents_row">
+                내용이 들어갑니다.
+            </div>
+            <div class="btn_popup_submit_wrap">
+                <a href="#" class="btn_popup_submit close_trigger"><span class="btn_popup_submit_text">확인</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="popup_wrap" id="againPopup">
+        <div class="bg_dim"></div>
+        <div class="popup_item">
+            <div class="popup_contents_row">
+                내용이 들어갑니다. againPopup
+            </div>
+            <div class="btn_popup_submit_wrap">
+                <a href="#" class="btn_popup_submit close_trigger"><span class="btn_popup_submit_text">다시 참여하기</span></a>
+            </div>
+        </div>
     </div>
     
 	<script>
         document.addEventListener("DOMContentLoaded", function() {
-            
+			// 인스턴스 선언
+            let rightPopup = new DesignPopup({
+                selector: "#rightPopup",
+                beforeCallback(){
+
+                },
+                callback(){
+
+                },
+                closeCallback(){
+                }
+            });
+            let againPopup = new DesignPopup({
+                selector: "#againPopup",
+                beforeCallback(){
+
+                },
+                callback(){
+
+                },
+                closeCallback(){
+                }
+            });
+
+            // 퍼블확인용
+            let url = window.location.href.split('?')[1];
+            let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+			if(url_2 === "right"){
+                rightPopup.popupShow();
+            }else if(url_2 === "modal_01"){
+                designModal({
+                    message : "동일한 휴대폰번호로 이벤트에 <strong class='color_emp'>이미 참여하였습니다</strong>",
+                    okcallback(){
+                        console.log('okcallback');
+                    }
+                });
+            }else if(url_2 === "modal_02"){
+               	againPopup.popupShow();
+            }else if(url_2 === "modal_03"){
+                designModal({
+                    message : "고객 정보값<span class='sub_text'>(이름/휴대폰번호)</span>을 입력하셔야 이벤트 참여가 가능합니다",
+                    okcallback(){
+                        console.log('okcallback');
+                    }
+                });
+            }else if(url_2 === "modal_04"){
+                designModal({
+                    message : "이벤트가<br>종료되었습니다",
+                    okcallback(){
+                        console.log('okcallback');
+                    }
+                });
+            }
         });
 	</script>
 </body>
