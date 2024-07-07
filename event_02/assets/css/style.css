@@ -99,13 +99,13 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .btn_popup_submit_wrap{
     border-radius: 0 0 18px 18px;background:#fff; margin:0 18px; padding:20px;
 }
-.btn_modal_submit_wrap{display:flex; }
+.btn_modal_submit_wrap{display:flex; background:#293feb;}
 .btn_popup_submit{ display:flex; justify-content: center; align-items: center; min-height:57px; background:#293feb; border-radius:8px; }
 .btn_popup_submit_text{color:#fff; font-size:15px; font-weight:900; font-family: 'OneShinhan';}
 
 .btn_modal_submit{flex:1;display:flex; justify-content: center; align-items: center; min-height:57px; box-sizing: border-box; padding:10px;position:relative;}
 .btn_modal_submit:after{display:block;content:'';height:22px;width:1px; background:#e5e5e5; position: absolute;top:50%;right:0;transform: translateY(-50%);}
-.btn_modal_submit_text{color:#0272d9; font-size:17px; font-weight:700;}
+.btn_modal_submit_text{color:#fff; font-size:17px; font-weight:700;  font-family: 'OneShinhan';}
 .btn_modal_submit:last-of-type:after{display:none;}
 
 .popup_box_tb {
@@ -123,7 +123,7 @@ html:not(.touchmode) ::-webkit-scrollbar {
 }
 
 .modal_box_td {
-    display: table-cell;vertical-align: middle;padding: 46px 20px;
+    display: table-cell;vertical-align: middle;padding: 46px 30px;
 }
 
 .popup_box_item {
@@ -134,16 +134,18 @@ html:not(.touchmode) ::-webkit-scrollbar {
     margin: 30px auto;max-height: calc(100% - 60px); position: relative;
 }
 .modal_box_item {
-     border-radius: 18px; 
-    box-sizing: border-box; width: 100%;
+     border-radius: 16px; 
+    box-sizing: border-box; width: 100%; position:relative;overflow:hidden;
     z-index: 20; background: #fff; text-align: center; box-sizing: border-box;
      opacity: 0; transition: 0.4s opacity;
     margin: 30px auto;max-height: calc(100% - 60px); position: relative;
 }
 .popup_box_message_row{padding:20px 20px 0;}
 .popup_box_message{color:#000000; font-size:17px; font-weight: 700; line-height:1.4; word-break: keep-all;}
-.modal_box_message_row{padding:20px 20px 0;}
-.modal_box_message{color:#000000; font-size:17px; font-weight: 700; line-height:1.4; word-break: keep-all;}
+.modal_box_message_row{padding:30px 20px 25px;}
+.modal_box_message{color:#4d4d4d; font-size:17px; font-weight: 700; line-height:1.4; word-break: keep-all;}
+.modal_box_message .sub_text{font-size:14px; font-weight:14px; font-weight:400}
+.modal_box_message .color_emp{color:#293feb; font-size:17px; font-weight: 700;}
 .ico_imp{text-align: center;  text-align: center; margin-bottom:18px;}
 .ico_imp img{vertical-align: top;max-width:115px;}
 .popup_word_message{text-align: center; font-size:18px; font-weight:900; word-break: keep-all; color:#000000;}

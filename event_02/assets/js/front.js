@@ -179,12 +179,12 @@ class DesignPopup {
 
     if(option.modaltype === "confirm"){
       btnHTML = `
-        <a href="#" class="btn_modal_submit primary cancelcall"><span class="btn_modal_submit_text">취소</span></a>
-        <a href="#" class="btn_modal_submit primary okcall"><span class="btn_modal_submit_text">확인</span></a>
+        <a href="javascript:;" class="btn_modal_submit primary cancelcall"><span class="btn_modal_submit_text">취소</span></a>
+        <a href="javascript:;" class="btn_modal_submit primary okcall"><span class="btn_modal_submit_text">확인</span></a>
       `;
     }else{
       btnHTML = `
-        <a href="#" class="btn_modal_submit primary okcall"><span class="btn_modal_submit_text">확인</span></a>
+        <a href="javascript:;" class="btn_modal_submit primary okcall"><span class="btn_modal_submit_text">확인</span></a>
       `;
     }
 
