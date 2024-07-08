@@ -59,16 +59,16 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .btn_event_action{}
 .bottom_cha{}
 .bottom_cha > img{}
-.event_step_wrap{background:#006f4a;}
+.event_step_wrap{background:#006f4a;padding:90px 0 56px 0;}
 .event_step_list{display:flex; text-align: center;}
-.event_step_list > li{flex:1;}
-.event_step_list > li:after{}
-.event_step_list > li:last-of-type:after{}
-.event_step_main{}
-.event_step_summary{}
-.event_step_img{}
-.event_step_img.type2{}
-.event_step_img.type3{}
+.event_step_list > li{flex:1;position:relative;}
+.event_step_list > li:after{display:block;content:'';width:15px; height:108px; background:url("../images/allow_step.png") no-repeat 50% 50%; position:absolute;bottom:0;right:-10px;}
+.event_step_list > li:last-of-type:after{display:none;}
+.event_step_main{color:#ffe179;font-size:22px; font-weight:700;}
+.event_step_summary{font-size:19px; color:#ffffff;margin-top:10px; line-height:1.5;}
+.event_step_img{display:block;width:130px;height:108px; background:url("../images/icon_process.png") no-repeat 0 0/100% auto; margin:10px auto 0;}
+.event_step_img.type2{background-position:0 50%;}
+.event_step_img.type3{background-position:0 100%;}
 
 .choice_item_wrap{}
 .choice_item_list{}
@@ -187,8 +187,18 @@ html:not(.touchmode) ::-webkit-scrollbar {
     .notice_cell{padding-bottom:8px;}
     .notice_key{font-size:14px; padding:10px 15px; border-radius:10px;}
     .notice_value{font-size:14px; padding:10px 0 10px 10px; }
-}
 
+
+    .event_step_wrap{padding:45px 0 18px 0;}
+    .event_step_list > li:after{width:8px; height:36px; background-size:100% auto; right:-4px;}
+    .event_step_list > li:last-of-type:after{display:none;}
+    .event_step_main{font-size:14px; }
+    .event_step_summary{font-size:12px;}
+    .event_step_img{width:44px;height:36px;}
+}
+@media(max-width:374px){
+    .event_step_summary{font-size:11px;}
+}
 
 /* popup */
 /* 공통 popup */
