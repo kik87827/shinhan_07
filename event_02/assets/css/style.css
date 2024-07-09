@@ -74,16 +74,16 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .event_step_img.type2{background-position:0 50%;}
 .event_step_img.type3{background-position:0 100%;}
 
-.choice_item_wrap{}
-.choice_item_list{}
+.choice_item_wrap{padding:40px 50px 20px;}
+.choice_item_list{display:flex;justify-content: space-between;}
 .choice_item_list > li{}
-.choice_item{}
-.choice_item:after{}
-.choice_item_num{}
-.choice_item_text{}
+.choice_item{display:inline-flex; align-items: center;  line-height:1; gap:10px; position:relative; opacity:.3;}
+.choice_item:after{display:none;content:'';width:calc(100% + 20px); height:5px; background:url("../images/right_line.png") no-repeat 0 0/100% auto; position:absolute;bottom:-10px;left:0;}
+.choice_item_num{font-size:40px;}
+.choice_item_text{font-size:35px;}
 
-.choice_item.active{}
-.choice_item.active:after{}
+.choice_item.active{opacity:1;}
+.choice_item.active:after{display:block;}
 .choice_item.active .choice_item_num{}
 .choice_item.active .choice_item_text{}
 
@@ -225,6 +225,13 @@ html:not(.touchmode) ::-webkit-scrollbar {
     .quiz_qus_emp{ font-size:5.208vw;}
     .quiz_qus_text{font-size:5.208vw;}
     .quiz_coment_para{font-size:2.995vw;}
+
+        
+    .choice_item_wrap{padding:5.208vw 6.51vw 2.604vw;}
+    .choice_item{gap:1.302vw;}
+    .choice_item:after{width:calc(100% + 2.604vw); height:0.651vw;bottom:-1.302vw;}
+    .choice_item_num{font-size:5.208vw;}
+    .choice_item_text{font-size:4.557vw;}
 }
 @media(max-width:374px){
     .event_step_summary{font-size:11px;}

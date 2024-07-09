@@ -49,27 +49,27 @@
 					<div class="choice_item_wrap">
 						<ul class="choice_item_list">
 							<li>
-								<a href="#" class="choice_item active">
+								<a href="#" class="choice_item">
 									<span class="choice_item_num">①</span>
-									<span class="choice_item_text">1,1</span>
+									<span class="choice_item_text">1, 1</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="choice_item">
 									<span class="choice_item_num">②</span>
-									<span class="choice_item_text">1,2</span>
+									<span class="choice_item_text">1, 2</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="choice_item">
 									<span class="choice_item_num">③</span>
-									<span class="choice_item_text">1,3</span>
+									<span class="choice_item_text">1, 3</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="choice_item">
 									<span class="choice_item_num">④</span>
-									<span class="choice_item_text">1,4</span>
+									<span class="choice_item_text">1, 4</span>
 								</a>
 							</li>
 						</ul>
@@ -484,6 +484,23 @@
             }
 
 
+            // quiz 선택
+            $(".choice_item").on("click",function(e){
+                e.preventDefault();
+
+                var $this = $(this);
+                var $this_not = $this.closest(".choice_item_list").find(".choice_item");
+
+                
+                if($this_not !== $this && !$this.hasClass("active")){
+                    $this_not.removeClass("active");
+                }
+
+
+                $this.toggleClass("active");
+            });
+
+
             // terms
             agreeTerms();
             function agreeTerms(){
@@ -493,7 +510,6 @@
                     e.preventDefault();
                     $(this).closest("li").toggleClass("active");
                 });
-                console.log(agree_props_form);
                 agree_props_form.on("click",function(){
                     /* if($(this).prop(":checked")){
                         $(this).closest("li").removeClass("active");
