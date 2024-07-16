@@ -73,8 +73,8 @@ html:not(.touchmode) ::-webkit-scrollbar {
 .event_step_list > li{flex:1;position:relative;}
 .event_step_list > li:after{display:block;content:'';width:15px; height:108px; background:url("../images/allow_step.png") no-repeat 50% 50%; position:absolute;bottom:0;right:-10px;}
 .event_step_list > li:last-of-type:after{display:none;}
-.event_step_main{color:#ffe179;font-size:22px; font-weight:700;}
-.event_step_summary{font-size:19px; color:#ffffff;margin-top:10px; line-height:1.5;}
+.event_step_main{color:#ffe179;font-size:24px; font-weight:700;}
+.event_step_summary{font-size:21px; color:#ffffff;margin-top:10px; line-height:1.3;}
 .event_step_img{display:block;width:130px;height:108px; background:url("../images/icon_process.png") no-repeat 0 0/100% auto; margin:10px auto 0;}
 .event_step_img.type2{background-position:0 50%;}
 .event_step_img.type3{background-position:0 100%;}
@@ -187,7 +187,7 @@ html:not(.touchmode) ::-webkit-scrollbar {
     .prebox_img_cols > img{vertical-align: middle;}
     .prebox_spec_cols{}
     .prebox_spec_para_01{font-size:3.646vw;}
-    .prebox_top br{display:none;}
+    /* .prebox_top br{display:none;} */
     .prebox_spec_para_01 strong{}
     .line_emp:before{ height:1.172vw;bottom:0.26vw;}
     .line_emp_text{font-size:3.646vw;}
@@ -209,9 +209,9 @@ html:not(.touchmode) ::-webkit-scrollbar {
     .event_step_wrap{padding:45px 0 18px 0;}
     .event_step_list > li:after{width:8px; height:36px; background-size:100% auto; right:-4px;}
     .event_step_list > li:last-of-type:after{display:none;}
-    .event_step_main{font-size:14px; }
-    .event_step_summary{font-size:12px;}
-    .event_step_img{width:44px;height:36px;}
+    .event_step_main{font-size:16px; letter-spacing: -0.25px}
+    .event_step_summary{font-size:14px; letter-spacing: -0.5px;}
+    .event_step_img{width:55px;height:45px;}
 
     .admission_wrap{padding:3.7vw 7.161vw 0;}
     .admission_wrap:before,
@@ -244,7 +244,7 @@ html:not(.touchmode) ::-webkit-scrollbar {
     .choice_item_text{font-size:4.557vw;}
 }
 @media(max-width:374px){
-    .event_step_summary{font-size:11px;}
+    .event_step_summary{font-size:13px;}
 }
 
 /* popup */
