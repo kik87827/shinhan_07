@@ -485,6 +485,29 @@
             </div>
         </div>
     </div>
+    <div class="popup_wrap" id="staffPopup">
+        <div class="bg_dim"></div>
+        <div class="popup_box_tb">
+            <div class="popup_box_td">
+                <div class="popup_box_item size2">
+                    <div class="popup_box_container">
+                        <div class="ico_message_wrap">
+                            <i class="ico"></i>
+                            <p class="ico_message">퀴즈 힌트는 슈퍼SOL로 <br>이동 후 확인 가능해요</p>
+                        </div>
+                        <div class="screen_img_wrap">
+                            <img src="./assets/images/img_popup.png" alt="">
+                        </div>
+                        <div class="popup_coment_wrap"><p class="popup_coment">가입 중 권유직원 등록 시 <strong>'신한라이프'</strong> 선택 필수!</p></div>
+                    </div>
+                    <div class="btn_popup_submit_wrap">
+                        <a href="javascript:;" class="btn_popup_submit"><span class="btn_popup_submit_text">신한 슈퍼SOL 이동</span></a>
+                    </div>
+                   <!--  <a href="javascript:;" class="btn_popup_close"><span class="hdtext">닫기</span></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
     
 	<script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -502,6 +525,17 @@
             });
             let againPopup = new DesignPopup({
                 selector: "#againPopup",
+                beforeCallback(){
+
+                },
+                callback(){
+
+                },
+                closeCallback(){
+                }
+            });
+            let staffPopup = new DesignPopup({
+                selector: "#staffPopup",
                 beforeCallback(){
 
                 },
@@ -541,6 +575,8 @@
                         console.log('okcallback');
                     }
                 });
+            }else if(url_2 === "staff"){
+                staffPopup.popupShow();
             }
 
 
